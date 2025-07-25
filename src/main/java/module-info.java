@@ -12,4 +12,6 @@ module com.example.crows__nest__client_trial {
 
     opens com.example.crows__nest__client_trial to javafx.fxml;
     exports com.example.crows__nest__client_trial;
+    exports com.example.crows__nest__client_trial.dbms;
+    opens com.example.crows__nest__client_trial.dbms to javafx.fxml;
 }
