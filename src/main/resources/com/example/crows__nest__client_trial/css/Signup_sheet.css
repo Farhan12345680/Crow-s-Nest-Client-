@@ -1,0 +1,43 @@
+#User_signUp_background{
+    -fx-background-color: #1d1f1f;
+    -fx-font-family: "Roboto", "Helvetica Neue", "Segoe UI", sans-serif;   
+}
+
+
+#label{ 
+        -fx-font-size: 30px; 
+        -fx-text-fill: #ffffff;
+}
+
+.button{
+        -fx-background-color: #2e2f2f; 
+    -fx-text-fill: #ffffff;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 60%;
+}
+
+ .button:hover {
+    -fx-background-color: #3a3b3b;
+    -fx-cursor: hand;
+}
+
+#signup1 , #signup2{
+    -fx-background-color: #2e2f2f;
+    -fx-text-fill: white;
+
+    -fx-border-width: 2px;
+
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px;
+}
+
+#signup1:focused {
+    -fx-border-color: #5a9;
+    -fx-effect: dropshadow(three-pass-box, #5a9, 5, 0, 0, 0);
+}
+#signup2:focused{
+        -fx-border-color: #5a9;
+    -fx-effect: dropshadow(three-pass-box, #5a9, 5, 0, 0, 0);
+}

@@ -57,16 +57,14 @@ class curr_text{
 }
 
 
-public class layout1 {
+public class main_layout {
 
 
-    public layout1(Stage stage) throws IOException {
+    public static Scene main_layout_sender(Stage  stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("production_optimized.fxml"));
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         Scene scene = new Scene(fxmlLoader.load(), screenBounds.getWidth()-100,screenBounds.getHeight()-100 );
-        stage.setTitle("Crow's Nest");
 
-        stage.setResizable(false);
 
         //parent_hbox(don't touch) #parent_hbox
         HBox global_container=(HBox) scene.getRoot().lookup("#global_container");
@@ -125,9 +123,8 @@ public class layout1 {
             place_holder2.fire();
         });
 
+        return scene;
 
-        stage.setScene(scene);
-        stage.show();
     }
 
 }
