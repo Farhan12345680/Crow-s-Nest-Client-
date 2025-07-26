@@ -1,0 +1,122 @@
+#global_container .button {
+    -fx-background-color: #2e2f2f;
+    -fx-text-fill: #ffffff;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 60%;
+}
+.label{
+        -fx-font-size: 20px; 
+        -fx-text-fill: #ffffff;
+}
+.text-field {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: #ece5dd; 
+    -fx-font-size: 13px; 
+
+}
+
+#search_field1{
+    -fx-background-color: #2e2f2f;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px;
+}
+
+
+#search_field2{
+    -fx-background-color: #2e2f2f;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px;
+}
+
+
+#global_container {
+    -fx-background-color: #1d1f1f;
+    -fx-font-family: "Roboto", "Helvetica Neue", "Segoe UI", sans-serif;
+
+}
+
+
+#message_displayer {
+        -fx-background-image: url("../images/nature12.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center center;
+        -fx-background-size: 50%;
+        -fx-background-color: #1d1f1f;
+}
+#settings{
+
+    -fx-background-image: url("../images/setting.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center ;
+    -fx-background-size: 40px ;
+     -fx-background-color: #1d1f1f;
+}
+
+#cross_button{
+    -fx-background-image: url("../images/remove.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 40px 40px;
+     -fx-background-color: #1d1f1f;
+}
+
+#send_button{
+    -fx-background-image: url("../images/send.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 40px 40px;
+     -fx-background-color: #1d1f1f;
+}
+#Message{
+        -fx-background-image: url("../images/chatting.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center center;
+        -fx-background-size: 40px 40px;
+         -fx-background-color: #1d1f1f;
+}
+
+#Call{
+        -fx-background-image: url("../images/phone-call.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center center;
+        -fx-background-size: 40px 40px;
+        -fx-background-color: #1d1f1f;
+}
+#Video_Call{
+        -fx-background-image: url("../images/video-camera.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center center;
+        -fx-background-size: 40px 40px;
+        -fx-background-color: #1d1f1f;
+}
+#current_chat_option{
+    -fx-border-width:0px 1px 0px 0px;
+        -fx-border-color: #2e2f2f;
+
+}
+#global_container .button:hover {
+    -fx-background-color: #3a3b3b;
+    -fx-cursor: hand;
+}
+
+#search_field1:focused {
+    -fx-border-color: #5a9;
+    -fx-effect: dropshadow(three-pass-box, #5a9, 5, 0, 0, 0);
+}
+
+#search_field2:focused {
+    -fx-border-color: #5a9;
+    -fx-effect: dropshadow(three-pass-box, #5a9, 5, 0, 0, 0);
+}
