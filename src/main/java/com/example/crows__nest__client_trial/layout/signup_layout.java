@@ -9,9 +9,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Screen;
 import com.example.crows__nest__client_trial.profile.Human_profile;
 import javafx.stage.Stage;
-
+import com.example.crows__nest__client_trial.dbms.dbms1_call;
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicBoolean;
+
 
 
 class password{
@@ -21,8 +21,10 @@ class password{
         password_txt="";
     }
 }
+
+
 public class signup_layout {
-    public static Scene signup_sheet(AtomicBoolean flag , Human_profile profile , Scene main_scene , Stage stage) throws IOException {
+    public static Scene signup_sheet( Human_profile profile , Scene main_scene , Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Sign_Up.fxml"));
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         Scene scene = new Scene(fxmlLoader.load(), screenBounds.getWidth()-100,screenBounds.getHeight()-100 );
@@ -47,12 +49,23 @@ public class signup_layout {
 
         Button sign_up= (Button) scene.getRoot().lookup("#Signup");
         sign_up.setOnAction((event)->{
+            dbms1_call.initialize_database();
             stage.setScene(main_scene);
             stage.show();
         });
 
         Button sign_in=(Button)scene.getRoot().lookup("#sign_in");
         sign_in.setOnAction((event)->{
+            Thread t = new Thread(new Runnable(){
+
+                @Override
+                public void run() {
+                    dbms1_call.initialize_database();
+                    dbms1_call.getData();
+
+                }
+            });
+            t.start();
             stage.setScene(main_scene);
             stage.show();
         });

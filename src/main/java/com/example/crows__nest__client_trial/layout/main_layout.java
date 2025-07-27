@@ -9,6 +9,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -35,7 +36,7 @@ class place_holder{
         }
         System.out.println("called 2");
 
-        new dbms1_call().send_to_the_client();
+        new dbms1_call().send_to_the_server();
         curr_field.setText(ll);
         _text.flag=0;
 
@@ -85,6 +86,10 @@ public class main_layout {
 
         Label Title_Shower=(Label) scene.getRoot().lookup("#Title_Shower");
         Title_Shower.prefWidthProperty().bind(Bindings.multiply(current_chat_option.widthProperty() , 0.85));
+
+        ScrollPane scrollpane_curr_mesage=(ScrollPane)scene.getRoot().lookup("#scroll");
+        scrollpane_curr_mesage.prefWidthProperty().bind(current_chat_option.widthProperty());
+
 
         // Search field 1
         TextField search_people1= (TextField) scene.getRoot().lookup("#search_people1");
